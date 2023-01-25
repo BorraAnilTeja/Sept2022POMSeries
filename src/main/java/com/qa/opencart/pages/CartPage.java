@@ -5,7 +5,7 @@ public class CartPage {
 	public static void main(String[] args) {
 
 
-		int i =60;
+	String cart = "macBook";
 	}
 
 }
