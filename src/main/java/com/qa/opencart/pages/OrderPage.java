@@ -6,6 +6,8 @@ public class OrderPage {
 
 
 		int i = 12345;
+		
+		System.out.println("fixing the dummy bug");
 	}
 
 }
