@@ -8,7 +8,7 @@ public class OrderPage {
 		int i = 12345;
 		
 		System.out.println("fixing the dummy bug and order page ");
-		System.out.println("order page code done");
+		
 
 	}
 
