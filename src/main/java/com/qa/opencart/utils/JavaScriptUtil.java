@@ -1,11 +1,11 @@
 package com.qa.opencart.utils;
 
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class JavaScriptUtil {
-
 	private WebDriver driver; 
 
 	public JavaScriptUtil(WebDriver driver) {
@@ -101,13 +101,8 @@ public class JavaScriptUtil {
 		js.executeScript("arguments[0].style.border='3px solid red'", element);
 	}
 	
+}
 
 
-
-
-
-
-
-	}
 
 
