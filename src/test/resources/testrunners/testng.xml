@@ -24,7 +24,7 @@
 		</classes>
 	</test>
 	
-<!--test name="Accounts Page Test">
+<test name="Accounts Page Test">
 	<classes>
 			<class name="com.qa.opencart.tests.AccountsPageTest" />
 		</classes>
@@ -34,7 +34,7 @@
 	<classes>
 			<class name="com.qa.opencart.tests.ProductInfoPageTest" />
 		</classes>
-	</test>-->
+	</test>
 	
 	
 
