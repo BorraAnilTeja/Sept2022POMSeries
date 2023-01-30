@@ -420,7 +420,7 @@ public class ElementUtil {
 				break;
 			} catch (NoSuchElementException e) {
 				System.out.println("element is not found in attempt : " + attempts + " for " + locator);
-			//	TimeUtil.applyWait(500);
+				TimeUtil.applyWait(500);
 			}
 			
 			attempts++;
@@ -447,7 +447,7 @@ public class ElementUtil {
 				break;
 			} catch (NoSuchElementException e) {
 				System.out.println("element is not found in attempt : " + attempts + " for " + locator);
-				//TimeUtil.applyWait(intervalTime);
+				TimeUtil.applyWait(intervalTime);
 			}
 			
 			attempts++;
