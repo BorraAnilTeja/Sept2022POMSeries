@@ -3,6 +3,7 @@ package com.qa.opencart.factory;
 import java.util.Properties;
 
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class OptionsManager {
@@ -10,12 +11,23 @@ public class OptionsManager {
 	private Properties prop;
 	private ChromeOptions co;
 	private FirefoxOptions fo;
+	private EdgeOptions eo;
+	
+	
 	public OptionsManager(Properties prop){
 		this.prop = prop;
 		
 	}
 	public ChromeOptions getChromeOptions() {
+		
 		co = new ChromeOptions();
+		
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			co.setCapability("enableVNC", true);
+			co.setPlatformName("linux");
+		}
+		
+		
 		if(Boolean.parseBoolean(prop.getProperty("headless"))) {
 			System.out.println("----running the browser in headless mode----");
 			co.setHeadless(true);
@@ -27,7 +39,15 @@ public class OptionsManager {
 		return co;
 }
 	public FirefoxOptions getFirefoxOptions() {
+		  
 		fo = new FirefoxOptions();
+		
+		
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			fo.setCapability("enableVNC", true);
+			fo.setPlatformName("linux");
+		}
+
 		if(Boolean.parseBoolean(prop.getProperty("headless"))) {
 			System.out.println("----running the browser in headless mode----");
 			fo.setHeadless(true);
@@ -38,5 +58,26 @@ public class OptionsManager {
 	}
 		return fo;
 }
+	
+	public EdgeOptions getEdgeOptions() {
+	
+		eo = new EdgeOptions();
+		
+		
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			eo.setCapability("enableVNC", true);
+			eo.setPlatformName("linux");
+		}
+
+		if(Boolean.parseBoolean(prop.getProperty("headless"))) {
+			System.out.println("----running the browser in headless mode----");
+			eo.setHeadless(true);
+		}
+		if(Boolean.parseBoolean(prop.getProperty("incognito"))) {
+			System.out.println("---running the browser in incognito mode---");
+			eo.addArguments("--incognito");
+	}
+		return eo;
+	}
 	
 }
