@@ -118,11 +118,15 @@
 					<forkCount>3</forkCount>
 					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 					<suiteXmlFiles>
-						<!--suiteXmlFile>src/test/resources/testrunners/testng.xml</suiteXmlFile>
--->
-                    <suiteXmlFile>${suiteXmlFiles}</suiteXmlFile>
-						<!-- <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> -->
-					</suiteXmlFiles>
+						
+						<suiteXmlFile>src/test/resources/testrunners/testng.xml</suiteXmlFile>
+						
+						</suiteXmlFiles>
+						
+						
+                    <!--suiteXmlFile>${suiteXmlFiles}</suiteXmlFile>
+						< <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> -->
+					
 
 					<!--<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
